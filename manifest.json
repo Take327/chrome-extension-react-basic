@@ -1,0 +1,26 @@
+{
+    "name": "chrome-extension-react-basic",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "chrome-extension-react-basic",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content-scripts/index.js"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_title": "開いてるタブの数を表示する",
+        "default_popup": "default-popup/build/index.html"
+    },
+    "background": {
+        "scripts": [
+            "background/index.js"
+        ],
+        "persistent": false
+    }
+}
